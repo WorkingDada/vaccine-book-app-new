@@ -1,11 +1,12 @@
 'use client';
 import React from "react";
 
-export default function InteractiveCard({children, contentName}:{children:React.ReactNode, contentName:string}) {
-    function onSelect(){
-        alert("Card is "+contentName)
-    }
+interface Props {
+    children: React.ReactNode;
+    handleCardClick: Function;
+}
 
+export default function InteractiveCard({children, handleCardClick}: Props) {
     function onCardMouseAction(event: React.SyntheticEvent){
         if (event.type=='mouseover'){
             event.currentTarget.classList.remove('shadow-lg')
@@ -19,7 +20,6 @@ export default function InteractiveCard({children, contentName}:{children:React.
     }
     return (
         <div className="w-1/5 h-[300px] rounded-lg shadow-lg" 
-        onClick={()=>onSelect()} 
         onMouseOver={(e)=>onCardMouseAction(e)}
         onMouseOut ={(e)=>onCardMouseAction(e)}>
             {children}
