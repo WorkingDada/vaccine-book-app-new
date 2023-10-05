@@ -2,6 +2,7 @@
 import { useReducer } from "react"
 import ProductCard from "./ProductCard"
 import { RatingsAction } from "@/types"
+import Link from "next/link"
 
 export default function CardPanel(){
     const ratingsReducer = (
@@ -42,27 +43,28 @@ export default function CardPanel(){
         dispatchRating({type: "DELETE", payload: { hopsitalToDelete: txt}})
     }
 
+    // Mock Data for Demonstration Only
+    const mockHospitalRepo = [
+        {hid: "001", name:"Chulalongkorn Hospital", image:"/img/chula.jpg"},
+        {hid: "002", name:"Thammasat University Hospital", image:"/img/thammasat.jpg"},
+        {hid: "003", name:"Rajavithi Hospital", image:"/img/rajavithi.jpg"}
+    ]
+
     return (
             <div style={{margin:"20px", display: "flex", flexDirection: "row",  flexWrap: "wrap", 
             justifyContent: "space-around", alignContent: "space-around"}}>
-                <ProductCard 
-                txt="Chulalongkorn Hospital" 
-                imgSrc="/img/chula.jpg"
-                ratings={ratings}
-                handleRatingChange={handleRatingChange}
-                handleCardClick={handleCardClick}/>
-                <ProductCard 
-                txt="Thammasat University Hospital" 
-                imgSrc="/img/thammasat.jpg"
-                ratings={ratings}
-                handleRatingChange={handleRatingChange}
-                handleCardClick={handleCardClick}/>
-                <ProductCard 
-                txt="Rajavithi Hospital" 
-                imgSrc="/img/rajavithi.jpg"
-                ratings={ratings}
-                handleRatingChange={handleRatingChange}
-                handleCardClick={handleCardClick}/>
+                {
+                    mockHospitalRepo.map((hospitalItem)=>(
+                        <Link href={`/hospital/${hospitalItem.hid}`} className="w-1/5">
+                        <ProductCard 
+                        txt={hospitalItem.name} 
+                        imgSrc={hospitalItem.image}
+                        ratings={ratings}
+                        handleRatingChange={handleRatingChange}
+                        handleCardClick={handleCardClick}/>
+                        </Link>
+                    ))
+                }
             <div className="border-t pt-4">
                 <h2 className="text-xl font-semibold mb-2 px-3">Hospital Ratings:</h2>
                 <table className="min-w-full divide-y divide-gray-200">

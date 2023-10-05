@@ -3,13 +3,11 @@ import styles from './page.module.css'
 import Banner from '@/components/Banner'
 import ProductCard from '@/components/ProductCard'
 import HospitalPanel from '@/components/CardPanel'
-import CardPanel from '@/components/CardPanel'
 
 export default function Home() {
   return (
     <main>
       <Banner/>
-      <CardPanel/>
     </main>
   )
 }

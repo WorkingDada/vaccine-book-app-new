@@ -23,7 +23,9 @@ export default function ProductCard({imgSrc,txt,ratings,handleRatingChange,handl
                 className='object-cover rounded-t-lg'/>
             </div>
             <div className="w-full h-[15%] p-[10px]">{txt}</div>
-            <div className='px-2'><RatingStar txt={txt} ratings={ratings} handleRatingChange={handleRatingChange}/></div>
+            <div className='px-2' onClick={(e)=>{e.stopPropagation()}}>
+                <RatingStar txt={txt} ratings={ratings} handleRatingChange={handleRatingChange}/>
+            </div>
         </InteractiveCard>
     );
 }
