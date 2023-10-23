@@ -24,7 +24,7 @@ function InputField({ id, name, type, autoComplete, label }) {
 
 export default function Home() {
   return (
-    <form className="py-24 px-48 lg:px-64 font-sans"> {/* Use a custom font here */}
+    <form className="py-24 px-48 lg:px-64 font-sans bg-white"> {/* Use a custom font here */}
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">

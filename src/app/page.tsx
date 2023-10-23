@@ -3,7 +3,7 @@ import PromoteCard from '@/components/PromoteCard'
 
 export default function Home() {
   return (
-    <main>
+    <main className='bg-white'>
       <Banner/>
       <PromoteCard></PromoteCard>
     </main>

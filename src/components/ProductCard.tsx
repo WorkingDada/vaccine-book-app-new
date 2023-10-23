@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import InteractiveCard from './InteractiveCard';
 import { useState } from 'react';
@@ -6,9 +7,9 @@ import RatingStar from './RatingStar';
 interface Props {
     imgSrc: string;
     txt: string;
-    ratings: Map<string,number>;
-    handleRatingChange: Function;
-    handleCardClick: Function;
+    ratings?: Map<string,number>;
+    handleRatingChange?: Function;
+    handleCardClick?: Function;
 }
 
 export default function ProductCard({imgSrc,txt,ratings,handleRatingChange,handleCardClick}: Props){            
@@ -23,9 +24,11 @@ export default function ProductCard({imgSrc,txt,ratings,handleRatingChange,handl
                 className='object-cover rounded-t-lg'/>
             </div>
             <div className="w-full h-[15%] p-[10px]">{txt}</div>
-            <div className='px-2' onClick={(e)=>{e.stopPropagation()}}>
+            {
+                ratings? <div className='px-2' onClick={(e)=>{e.stopPropagation()}}>
                 <RatingStar txt={txt} ratings={ratings} handleRatingChange={handleRatingChange}/>
-            </div>
+                </div> : ''
+            }
         </InteractiveCard>
     );
 }

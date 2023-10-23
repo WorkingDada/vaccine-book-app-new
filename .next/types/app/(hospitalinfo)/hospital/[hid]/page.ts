@@ -1,4 +1,4 @@
-// File: /Users/officeservice/Desktop/ReactWeb/SWDEV/vaccine-book-app/src/app/(hospitalinfo)/hospital/[hid]/page.tsx
+// File: C:\Users\WINDOWS 10\Desktop\vaccine-app\vaccine-book-app\src\app\(hospitalinfo)\hospital\[hid]\page.tsx
 import * as entry from '../../../../../../src/app/(hospitalinfo)/hospital/[hid]/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
