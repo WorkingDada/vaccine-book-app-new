@@ -10,7 +10,7 @@ export default async function TopMenu() {
 
   return (
     <div className='h-13 bg-white fixed top-0 left-0 right-0 z-30 flex flex-row-reverse items-center'>
-      <Image src={'/img/logo.png'} alt='logo' width={50} height={100} sizes='100vh'/>
+      <Link href='/'><Image src={'/img/logo.png'} alt='logo' width={50} height={100} sizes='100vh'/></Link>
       <TopMenuItem title='Booking' pageRef='/booking'/>
       {
         session?
