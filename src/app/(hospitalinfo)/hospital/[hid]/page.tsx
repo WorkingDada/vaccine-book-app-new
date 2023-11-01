@@ -5,7 +5,7 @@ export default async function HospitalDetailPage({params} : {params: {hid:string
     const hospitalDetail = await getHospital(params.hid)
 
     return (
-        <main className="text-center p-5">
+        <main className="text-center p-5 bg-white text-black">
             <h1 className="text-lg font-medium">{hospitalDetail.data.name}</h1>
             <div className="flex flex-row my-5">
                 <Image src={ hospitalDetail.data.picture }

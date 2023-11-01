@@ -1,5 +1,5 @@
 import NextAuth from "next-auth/next";
-import { AuthOptions } from "next-auth";
+import { AuthOptions } from "next-auth"; 
 import CredentialsProvider from "next-auth/providers/credentials";
 import { getServerSession } from "next-auth";
 import userLogIn from "@/libs/userLogIn";
@@ -18,10 +18,11 @@ export const authOptions:AuthOptions = {
             password: { label: "Password", type: "password" }
           },
           async authorize(credentials, req) {
-
+            // const user = { id: "1", name: "J Smith", email: "jsmith@example.com" }
             if (!credentials) return null
             const user = await userLogIn(credentials.email,credentials.password)
-            if (user) {
+
+            if (user) { 
               // Any object returned will be saved in `user` property of the JWT
               return user
             } else {

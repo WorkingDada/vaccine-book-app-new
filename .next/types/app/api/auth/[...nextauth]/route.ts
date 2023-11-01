@@ -1,4 +1,4 @@
-// File: /Users/officeservice/Desktop/SWDEVII/ReactWeb/SWDEV/vaccine-book-app/src/app/api/auth/[...nextauth]/route.ts
+// File: C:\Users\WINDOWS 10\Desktop\vaccine-app\vaccine-book-app\src\app\api\auth\[...nextauth]\route.ts
 import * as entry from '../../../../../../src/app/api/auth/[...nextauth]/route.js'
 import type { NextRequest } from 'next/server.js'
 
