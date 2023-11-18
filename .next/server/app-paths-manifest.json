@@ -1,7 +1,6 @@
 {
+  "/mybooking/page": "app/mybooking/page.js",
   "/page": "app/page.js",
-  "/booking/page": "app/booking/page.js",
-  "/(hospitalinfo)/hospital/page": "app/(hospitalinfo)/hospital/page.js",
-  "/(hospitalinfo)/hospital/[hid]/page": "app/(hospitalinfo)/hospital/[hid]/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js"
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/booking/page": "app/booking/page.js"
 }

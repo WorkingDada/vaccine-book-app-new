@@ -4,10 +4,11 @@ import { DatePicker } from "@mui/x-date-pickers"
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider"
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs"
 import { Select, MenuItem } from "@mui/material"
+import { Dayjs } from "dayjs"
 
-export default function LocationDateReserve(){
+export default function LocationDateReserve({onDateChange, onHospitalChange}:{ onDateChange:Function, onHospitalChange:Function }){
 
-    const [reserveDate,setReserveDate] = useState(null)
+    const [reserveDate,setReserveDate] = useState<Dayjs|null>(null)
     const [location,setLocation] = useState('CH')
 
     return (
@@ -16,11 +17,16 @@ export default function LocationDateReserve(){
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker classNam="bg-white"
                 value={reserveDate}
-                onChange={(value)=>setReserveDate(value)}/>
+                onChange={(value)=>{
+                    setReserveDate(value);
+                    onDateChange(value)}}/>
             </LocalizationProvider>
             <Select varient="standard" 
             name="location" id="location" value={location} 
-            onChange={(e)=>setLocation(e.target.value)}
+            onChange={(e)=>{
+                setLocation(e.target.value);
+                onHospitalChange(e.target.value)
+            }}
             className="h-[2em] w-[200px]">
                 <MenuItem value="CH">Chulalongkorn Hospital</MenuItem>
                 <MenuItem value="RH">Rajavithi Hospital</MenuItem>
