@@ -14,7 +14,7 @@ export default async function Booking() {
   var createdAt = new Date(profile.data.createdAt)
 
   return (
-    <div className="bg-white p-5">
+    <div className="bg-white p-5 text-black">
       <div className='bg-slate-300 rounded-lg m-5 p-5'>
         <div className="text-2xl">{profile.data.name}</div>
         <table className="table-auto border-separate border-spacing-2">
