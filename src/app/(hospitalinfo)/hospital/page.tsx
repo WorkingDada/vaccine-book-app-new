@@ -5,7 +5,7 @@ import { LinearProgress } from "@mui/material"
 import AddHospitalForm from "@/components/AddHospitalForm";
 
 export default async function hospitals(){
-    
+
     const Hospitals = getHospitals()
 
     return (

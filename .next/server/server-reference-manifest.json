@@ -1,13 +1,5 @@
 {
   "node": {
-    "00f1b515af12d48715487cb1053e3bf221128f1e": {
-      "workers": {
-        "app/(hospitalinfo)/hospital/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fofficeservice%2FDesktop%2FSWDEVII%2FReactWeb%2FSWDEV%2Fvaccine-book-app%2Fsrc%2Fcomponents%2FAddHospitalForm.tsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%5D&__client_imported__=!"
-      },
-      "layer": {
-        "app/(hospitalinfo)/hospital/page": "rsc"
-      }
-    },
     "2dfb3a98cd2acbe8021ab66263be2fe8688698c5": {
       "workers": {
         "app/(hospitalinfo)/hospital/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fofficeservice%2FDesktop%2FSWDEVII%2FReactWeb%2FSWDEV%2Fvaccine-book-app%2Fsrc%2Fcomponents%2FAddHospitalForm.tsx%22%2C%5B%22%24%24ACTION_1%22%5D%5D%5D&__client_imported__=!"
